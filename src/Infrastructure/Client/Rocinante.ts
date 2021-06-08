@@ -5,6 +5,7 @@ import APoD from '../../Commands/APoD';
 import XKCD from '../../Commands/XKCD';
 import Avasarala from '../../Commands/Avasarala';
 import Miller from '../../Commands/Miller';
+import Stats from '../../Commands/Stats';
 import logger from '../../Utils/logger';
 
 /**
@@ -84,7 +85,7 @@ export default class Rocinante extends Client {
 
 			await this.roleManager.init();
 			await this.establishedMemberHandler.init();
-			this.commandHandler.init([ APoD, XKCD, Avasarala, Miller ]);
+			this.commandHandler.init([ APoD, XKCD, Avasarala, Miller, Stats ]);
 			this.amaHandler.init();
 
 			logger.info('The Rocinante is Ready');
